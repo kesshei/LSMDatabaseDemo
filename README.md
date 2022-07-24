@@ -157,7 +157,7 @@ Wal.log和SSTable，都是为了保证数据能落地持久化不丢失，而Mem
 ### KeyValue (具体数据的结构)
 设计的时候，要先设计实际数据的结构，我是这样设计的
 
-主要有三个主要的信息，key, DataValue，Deleted ，其中DataValue是Object类型的，我这边写入到文件里的话，是直接序列化写入的。
+主要有三个主要的信息，key, DataValue，Deleted ，其中DataValue是Byte[]类型的，我这边写入到文件里的话，是直接序列化写入的。
 
 ```csharp
 /// <summary>
